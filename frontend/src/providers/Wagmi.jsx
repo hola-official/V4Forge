@@ -9,6 +9,8 @@ import {
   import { pixelArt, personas } from "@dicebear/collection";
   
   const REOWN_CLOUD_APP_ID = import.meta.env.VITE_REOWN_CLOUD_APP_ID || "";
+
+  console.log(REOWN_CLOUD_APP_ID);
   
   export const config = createConfig({
     appName: "V4Forge",
@@ -72,11 +74,11 @@ import {
           <RainbowKitProvider
             initialChain={baseSepolia?.id}
             modalSize="compact"
-            // theme={darkTheme({
-            //   // accentColor: "#97CBDC/30",
-            //   accentColorForeground: "white",
-            //   fontStack: "system",
-            // })}
+            theme={darkTheme({
+              accentColor: "#97CBDC/30",
+              accentColorForeground: "white",
+              fontStack: "system",
+            })}
             avatar={customAvatar}
           >
             {children}
